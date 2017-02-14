@@ -1,0 +1,8 @@
+<%= form_tag(galleries_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Galleries" %>
+<%= submit_tag "Search" %>
+  <% if @galleries.present? %>
+  <% else %>
+    <p>There are no galleries containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+<% end %>

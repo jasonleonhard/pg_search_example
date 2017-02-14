@@ -1,0 +1,8 @@
+<%= form_tag(articles_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Articles" %>
+<%= submit_tag "Search" %>
+  <% if @articles.present? %>
+  <% else %>
+    <p>There are no articles containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+<% end %>
