@@ -10,7 +10,8 @@ class Article < ApplicationRecord
     ),
     using: {
       tsearch: {
-        dictionary: 'english'
+        # dictionary: 'english'
+        tsvector_column: "tsv"
       }
     }
   )

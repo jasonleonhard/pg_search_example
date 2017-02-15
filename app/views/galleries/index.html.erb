@@ -2,6 +2,8 @@
 
 <h1>Galleries</h1>
 
+<%= render partial: "shared/galleries_searchbox" %>
+
 <table>
   <thead>
     <tr>
@@ -26,4 +28,3 @@
 
 <%= link_to 'New Gallery', new_gallery_path %>
 <%= link_to 'Articles', articles_path %>
-<%= render partial: "shared/galleries_searchbox" %>

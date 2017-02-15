@@ -1,6 +1,6 @@
 PgSearch.multisearch_options = {
   using: {
-    tsearch:    { dictionary: 'english' },
+    tsearch:    { tsvector_column: "tsv" },
     trigram:    { threshold:  0.1 },
     dmetaphone: {}
   }
